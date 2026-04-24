@@ -1,25 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nda-roch <nda-roch@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/24 14:32:29 by nda-roch          #+#    #+#             */
-/*   Updated: 2026/04/24 16:26:42 by nda-roch         ###   ########.fr       */
+/*   Created: 2026/04/24 16:27:34 by nda-roch          #+#    #+#             */
+/*   Updated: 2026/04/24 17:07:08 by nda-roch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstnew(void *content)
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	t_list	*new;
-
-	new = malloc(sizeof(t_list) * 1);
-	if (new == NULL)
-		return (NULL);
-	new->content = content;
-	new->next = NULL;
-	return (new);
+	if (new == NULL || lst == NULL)
+	{
+	}
+	else
+	{
+		new->next = *lst;
+		*lst = new;
+	}
 }
