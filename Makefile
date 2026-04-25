@@ -6,7 +6,7 @@
 #    By: nda-roch <nda-roch@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/04/20 20:13:06 by nda-roch          #+#    #+#              #
-#    Updated: 2026/04/24 17:32:09 by nda-roch         ###   ########.fr        #
+#    Updated: 2026/04/25 17:53:25 by nda-roch         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,7 +47,10 @@ SRCS = ft_isalpha.c \
 			 ft_putnbr_fd.c \
 			 ft_lstnew.c \
 			 ft_lstadd_front.c \
-			 ft_lstsize.c
+			 ft_lstsize.c \
+			 ft_lstlast.c \
+			 ft_lstadd_back.c \
+			 ft_lstdelone.c
 OBJS = $(SRCS:.c=.o)
 
 
