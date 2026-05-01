@@ -1,18 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nda-roch <nda-roch@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/21 19:14:11 by nda-roch          #+#    #+#             */
-/*   Updated: 2026/04/21 19:14:48 by nda-roch         ###   ########.fr       */
+/*   Created: 2026/04/27 11:32:25 by nda-roch          #+#    #+#             */
+/*   Updated: 2026/04/27 11:37:08 by nda-roch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_tolower(int c)
+#include "libft.h"
+
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	if (c >= 65 && c <= 90)
-		return (c + 32);
-	return (c);
+	while (lst)
+	{
+		f(lst->content);
+		lst = lst->next;
+	}
 }

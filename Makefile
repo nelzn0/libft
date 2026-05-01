@@ -5,10 +5,11 @@
 #                                                     +:+ +:+         +:+      #
 #    By: nda-roch <nda-roch@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2026/04/20 20:13:06 by nda-roch          #+#    #+#              #
-#    Updated: 2026/04/25 17:53:25 by nda-roch         ###   ########.fr        #
+#    Created: 2026/04/20 13:44:50 by nda-roch          #+#    #+#              #
+#    Updated: 2026/04/27 16:14:57 by nda-roch         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
+
 
 NAME = libft.a
 CC = cc
@@ -39,6 +40,8 @@ SRCS = ft_isalpha.c \
 			 ft_substr.c \
 			 ft_strjoin.c \
 			 ft_strtrim.c \
+			 ft_split.c \
+			 ft_itoa.c \
 			 ft_strmapi.c \
 			 ft_striteri.c \
 			 ft_putchar_fd.c \
@@ -50,7 +53,10 @@ SRCS = ft_isalpha.c \
 			 ft_lstsize.c \
 			 ft_lstlast.c \
 			 ft_lstadd_back.c \
-			 ft_lstdelone.c
+			 ft_lstdelone.c \
+			 ft_lstclear.c \
+			 ft_lstiter.c \
+			 ft_lstmap.c
 OBJS = $(SRCS:.c=.o)
 
 
@@ -68,9 +74,6 @@ clean:
 fclean: clean
 	rm -f $(NAME)
 
-test: all
-	@$(CC) $(CFLAGS) $(SRCS)
-	@echo "TEST - Done !"
-	@./a.out
-
 re: fclean all
+
+.PHONY: all clean fclean re

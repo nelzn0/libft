@@ -5,14 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: nda-roch <nda-roch@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/24 15:00:57 by nda-roch          #+#    #+#             */
-/*   Updated: 2026/04/24 15:00:58 by nda-roch         ###   ########.fr       */
+/*   Created: 2026/04/22 18:17:50 by nda-roch          #+#    #+#             */
+/*   Updated: 2026/04/29 11:49:19 by nda-roch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t	ft_int_max_checker(char const *s, unsigned int start)
+static size_t	remaining_len(char const *s, unsigned int start)
 {
 	size_t	actual_len;
 
@@ -32,8 +32,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	{
 		return (ft_strdup(""));
 	}
-	if (len > ft_int_max_checker(s, start))
-		len = ft_int_max_checker(s, start);
+	if (len > remaining_len(s, start))
+		len = remaining_len(s, start);
 	result = malloc(len + 1);
 	if (result == NULL)
 		return (NULL);

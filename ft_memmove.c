@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: nda-roch <nda-roch@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/21 11:41:29 by nda-roch          #+#    #+#             */
-/*   Updated: 2026/04/24 15:05:30 by nda-roch         ###   ########.fr       */
+/*   Created: 2026/04/21 17:01:09 by nda-roch          #+#    #+#             */
+/*   Updated: 2026/04/21 18:41:42 by nda-roch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,8 +46,8 @@ static void	ft_backward_copy(void *dst, const void *src, size_t len)
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	if (src == NULL || dst == NULL)
-		return (dst);
+	if (src == NULL && dst == NULL)
+		return (NULL);
 	if (src > dst)
 		ft_forward_copy(dst, src, len);
 	else

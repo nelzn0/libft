@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: nda-roch <nda-roch@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/24 14:56:05 by nda-roch          #+#    #+#             */
-/*   Updated: 2026/04/24 14:56:08 by nda-roch         ###   ########.fr       */
+/*   Created: 2026/04/22 13:29:07 by nda-roch          #+#    #+#             */
+/*   Updated: 2026/04/29 11:47:40 by nda-roch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	{
 		if (*temp_s == (unsigned char) c)
 		{
-			return ((char *) temp_s);
+			return ((void *) temp_s);
 		}
 		temp_s++;
 		n--;
